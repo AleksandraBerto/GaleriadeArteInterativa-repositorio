@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Slide de Obras de Arte</title>
+    <link rel="shortcut icon" href="img/icone-art.png" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cads com obras de arte">
+    <meta name="keywords" content="Website, Obras, Slide, HTML">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="author" content="Aleksandra Santos Berto">
+    <style>
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="titulo">Pinturas do Impressionismo</h1>
+
+        <div class="slide" style="background-image: url(img/obra1.jpg);">
+            <h3>Claude Monet</h3>
+        </div>
+
+        <div class="slide" style="background-image: url(img/obra2.jpg);">
+            <h3>Claude Monet</h3>
+        </div>
+
+        <div class="slide" style="background-image: url(img/obra3.jpg);">
+            <h3>Claude Monet</h3>
+        </div>
+
+        <div class="slide" style="background-image: url(img/obra4.jpg);">
+            <h3>Claude Monet</h3>
+        </div>
+
+        <div class="slide" style="background-image: url(img/obra5.jpg);">
+            <h3>Van Gogh</h3>
+        </div>
+
+    </div>
+
+    <script>
+        activeslideimg();
+
+        function activeslideimg(activeSlide = 2){
+            const slides = document.querySelectorAll(".slide");
+
+            slides[activeSlide].classList.add("active");
+
+            for (const slide of slides){
+                slide.addEventListener("click", () => {
+                    clearActiveClasses();
+
+                    slide.classList.add("active");
+                })
+            }
+
+            function clearActiveClasses(){
+                slides.forEach((slide) => {
+                    slide.classList.remove("active");
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>
