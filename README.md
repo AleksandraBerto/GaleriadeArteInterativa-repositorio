@@ -8,7 +8,7 @@ A interatividade é o ponto principal do projeto, que foi um excelente exercíci
 * **JavaScript:** Para a lógica que detecta o clique do usuário e aplica a classe 'ativa' ao slide selecionado, desencadeando a animação em CSS.
 
 ## 🚀 Acesse o Site
-
+https://aleksandraberto.github.io/GaleriadeArteInterativa-repositorio/
 
 
 ## 📂 Estrutura do projeto
